@@ -19,6 +19,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'cart.apps.CartConfig',
     'shop.apps.ShopConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -108,3 +109,4 @@ MEDIA_URL = '/media/'  # this is our local path where our media located
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 os.path.join(BASE_DIR)
+CART_SESSION_ID = 'cart'
