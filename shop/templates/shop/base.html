@@ -12,18 +12,30 @@
 
 <body>
 
-    <div id="header">
+<div id="header">
 
-        <a href="/" class="logo">My Shop</a>
+    <a href="/" class="logo">My Shop</a>
 
+</div>
+<div id="subheader">
+    <div class="cart">
+        {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+                Your cart:
+                <a href="{% url "cart:cart_detail" %}">
+                    {{ total_items }} item{{ total_items|pluralize }},
+                    ${{ cart.get_total_price }}
+                </a>
+            {% else %}
+                Your cart is empty.
+            {% endif %}
+        {% endwith %}
     </div>
-    <div id="subheader">
-        <div class="cart">Your Cart is empty</div>
-    </div>
-    <div id="content">
-        {% block content %}
-        {% endblock content %}
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock content %}
 
-    </div>
+</div>
 </body>
 </html>

@@ -1,7 +1,6 @@
 # bookpage = 425
 # username= shopadmin
 # password = testing321
-# todo add a requirement.txt file
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -48,6 +47,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'cart.context_processors.cart',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
