@@ -27,17 +27,26 @@
                             {% static 'img/no_image.png' %}{% endif %}" alt="">
                         </a>
                     </td>
-                <td>{{ product.name }}</td>
-                <td>{{ item.quantity }}</td>
-                <td><a href="{% url 'cart:cart_remove' product_id %}">Remove</a></td>
-                <td class="num">$ {{ item.price }}</td>
-                <td class="num">$ {{ item.total_price }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td><a href="{% url 'cart:cart_remove' product.id %}">Remove</a></td>
+                    <td class="num">$ {{ item.price }}</td>
+                    <td class="num">$ {{ item.total_price }}</td>
                 </tr>
 
             {% endwith %}
         {% endfor %}
+        <tr class="total">
+            <td>Total</td>
+            <td colspan="4"></td>
+            <td class="num">$ {{ cart.get_total_price }}</td>
+        </tr>
 
         </tbody>
     </table>
+    <p class="text-right">
+        <a href="{% url 'shop:product_list' %}" class="button light"> Continue Shopping</a>
+        <a href="#" class="button">Checkout</a>
+    </p>
 {% endblock %}
 

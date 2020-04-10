@@ -1,7 +1,7 @@
 # bookpage = 425
 # username= shopadmin
 # password = testing321
-
+# todo add a requirement.txt file
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
