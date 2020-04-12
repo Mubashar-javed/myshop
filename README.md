@@ -1,3 +1,4 @@
 # Django project of e-commerce website
 
-just for practice.
+just for practice.  
+Commiting everyday  

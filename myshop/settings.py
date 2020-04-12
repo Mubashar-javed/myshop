@@ -1,4 +1,4 @@
-# bookpage = 425
+# bookpage = 437
 # username= shopadmin
 # password = testing321
 import os
@@ -18,6 +18,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'orders.apps.OrdersConfig',
     'cart.apps.CartConfig',
     'shop.apps.ShopConfig',
     'django.contrib.admin',
