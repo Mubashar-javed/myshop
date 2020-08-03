@@ -8,4 +8,4 @@ class OrderCreateForm(forms.ModelForm):
 
     class Meta:
         model = Order
-        exclude = ['updated', 'created', 'paid']
+        exclude = ['updated', 'created', 'paid', 'braintree_id']

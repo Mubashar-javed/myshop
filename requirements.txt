@@ -1,3 +1,5 @@
+weasyprint
+braintree
 asgiref==3.2.5
 autopep8==1.4.4
 certifi==2020.4.5.1
