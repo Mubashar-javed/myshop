@@ -12,7 +12,7 @@ class Cart(object):
         # Initialize the cart
         self.session = request.session
         # store current applied coupon
-        self.coupon_id = request.session.get('session_id')
+        self.coupon_id = request.session.get('coupon_id')
         # ........
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
@@ -26,8 +26,8 @@ class Cart(object):
         product_id = str(product.id)
 
         if product_id not in self.cart:
-            self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
-
+            self.cart[product_id] = {'quantity': 0,
+                                     'price': str(product.price)}
         if update_quantity:
             self.cart[product_id]['quantity'] = quantity
         else:
