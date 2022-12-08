@@ -3,7 +3,7 @@ autopep8==1.4.4
 braintree==4.5.0
 cairocffi==1.2.0
 CairoSVG==2.5.1
-certifi==2020.4.5.1
+certifi==2022.12.7
 cffi==1.14.4
 chardet==4.0.0
 cssselect2==0.4.1
